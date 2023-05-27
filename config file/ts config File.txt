@@ -1,0 +1,27 @@
+i) Open your terminal in your project's root directory.
+ii)Install typescript globally with npm install typescript@latest -g.
+iii) Generate a tsconfig file by running: tsc --init.
+iv) change deflault 
+        
+
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "outDir": "./public",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
+vi)
+tsc src/index.ts
