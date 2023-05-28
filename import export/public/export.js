@@ -1,4 +1,6 @@
 "use strict";
+// when you want to export just value then we use default export  
+// we can change the name of export 
 Object.defineProperty(exports, "__esModule", { value: true });
 class Welcome {
     constructor(text) {

@@ -1,0 +1,54 @@
+jason : Javascript object notation 
+--> Data repesentaion Format
+-->commonly used for API And Config file
+-->Lightweight and easay to read and write   
+***Jason type 
+    string ="hello zain "
+    number = 10, 1.5 , -30
+    Boolean =true , false 
+    null    =   null 
+    Array   = [1, 2, 3 ], ["ueyw", "636"]
+    Object  = {"key" : "value"}
+
+Example :
+create file with .json extension 
+
+  user.json 
+[ start of json file 
+{ start of json property 
+//string 
+"name":"zain" ,
+//number 
+  "favoriteNumber":3,
+//boolean 
+   "is programing": true ,
+//array
+    "hobbies" :["Weight lifting", "Bowling"],
+//object 
+    "friends":[
+ { 
+        "name":"joey", 
+         "name":"zain" ,
+          "favoriteNumber":3,
+            "is programing": true ,
+            "hobbies" :["Weight lifting", "Bowling"],
+    }];       
+
+         
+} end of json property 
+] end of json file 
+
+// anything in JSON is valid javascript 
+
+
+
+
+
+
+
+
+
+
+
+
+ 

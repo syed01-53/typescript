@@ -1,0 +1,9 @@
+npx ts-node filename.ts
+#when you use require keywor to get non default data  
+npm i --save-dev @types/node
+tsc -w for contiue watching changes 
+ts --init
+tsc 
+node name of file 
+
+

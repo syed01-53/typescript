@@ -1,3 +1,6 @@
+// when you want to export just value then we use default export  
+// we can change the name of export 
+
 export default class Welcome{
      text:string;
     constructor(text:string){

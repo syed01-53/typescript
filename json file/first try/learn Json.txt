@@ -1,0 +1,27 @@
+-->  JSON stand  :Javascript object Notation 
+--> is a text format for storing and transporting data 
+--> API  and config File  commonly used 
+
+{ start of json object
+//string 
+"name":"zain" ,
+//number 
+  "favoriteNumber":3,
+//boolean 
+   "is programing": true ,
+//array
+    "hobbies" :["Weight lifting", "Bowling"],
+//object 
+    "friends":[
+ { 
+        "name":"joey", 
+         "name":"zain" ,
+          "favoriteNumber":3,
+            "is programing": true ,
+            "hobbies" :["Weight lifting", "Bowling"],
+    }];       
+
+         
+} end of json object
+
+--> language independent  means use any way 

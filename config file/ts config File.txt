@@ -20,7 +20,7 @@ iv) change deflault
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/path"],
   "exclude": ["node_modules"]
 }
 vi)
