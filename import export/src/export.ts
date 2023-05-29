@@ -12,7 +12,8 @@ export default class Welcome{
     }
 }
 
-
+// basically it is a module module means  block of data 
+// use-full  we use same name of variable 
 
 
 // you can use only onetime default keyword in whole of program 

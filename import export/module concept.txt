@@ -1,0 +1,26 @@
+block of code 
+Modules in TypeScript
+Additional Reading:
+Impatient JS (Modules)
+MDN: JavaScript Modules
+There are three main things to consider when writing module-based code in TypeScript:
+
+Syntax: What syntax do I want to use to import and export things?
+Module Resolution: What is the relationship between module names (or paths) and files on disk?
+Module Output Target: What should my emitted JavaScript module look like?
+ES Module Syntax
+A file can declare a main export via export default:
+// @filename: hello.ts
+export default function helloWorld() {
+  console.log("Hello, world!");
+}
+
+//seting in tsconfig file 
+
+That’s why TypeScript brings two new module and moduleResolution settings: Node16 and NodeNext.
+
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+    }
+}

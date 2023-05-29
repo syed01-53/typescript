@@ -1,0 +1,23 @@
+first step
+  npm i inquirer
+
+  npm i --save-dev @types/inquirer
+
+documentaion in inquirer 
+https://www.npmjs.com/package/inquirer
+import inquirer from "inquirer"
+package.jason 
+npm init -y 
+ add   "type": "module", in package.json 
+
+use chalk 
+import chalk from "chalk"
+
+    npm install chalk
+tsc 
+node app.ts
+
+
+
+
+

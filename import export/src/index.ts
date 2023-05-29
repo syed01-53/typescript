@@ -1,7 +1,9 @@
 // import Welcome from "./export";
 
-import { log } from "console";
+
 import Wel from "./export"; //export form the default 
+
+// export by required keyword  
 let student1= require("./student")  //export form the non-default 
 let myData =student1.studentObject;
 let myData1=student1.newStudent;
@@ -16,7 +18,7 @@ console.group(`id=${myData[i].id} , name=${myData[i].name}`);
 let welcome=new Wel("Most Welcome");
 console.log(welcome.displayMassage());
 
-// import multiple function 
+// import multiple function // export by name 
 import subtraction, { multiplication, sum } from "./utility";
 console.log(sum(1,3))
 console.log(subtraction(1,3));
