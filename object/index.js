@@ -60,7 +60,7 @@ var person = {
     personMassage: "we can do ",
     personId: 3636,
     worker: function () {
-        console.log("hello powerful man ".concat(person.personMassage));
+        console.log("hello powerful man ".concat(this.personMassage));
     },
     details: function (name, id) {
         console.log("hello powerful man ".concat(name, " and his id is ").concat(id));
@@ -119,3 +119,20 @@ for (var i = 0; i < employee.length; i++) {
     console.log("all employee");
     console.log(employee[i]);
 }
+// we are using of loop A for...of loop operates on the values sourced from an iterable one by one in sequential order.
+var totalNoneEmployee = 0;
+var totalEmployee = 0;
+var jobEmployee = [];
+for (var _i = 0, employee_1 = employee; _i < employee_1.length; _i++) {
+    var iterator = employee_1[_i];
+    if (iterator.status === "employee") {
+        totalEmployee += 1;
+        jobEmployee.push(iterator);
+    }
+    else {
+        totalNoneEmployee += 1;
+    }
+}
+console.log(jobEmployee);
+console.log("total employee ".concat(totalEmployee));
+console.log("total  not employee ".concat(totalNoneEmployee));

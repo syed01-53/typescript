@@ -37,3 +37,32 @@ let arrowFunction1= (num:string, num2?:number, num1:null=null)=>{
   console.log(arrowFunction1("number"));
 
 
+// recursive function call it self 
+function getRecursive (nr:number){
+  console.log(nr);
+  if(nr>0)
+  {
+    getRecursive(--nr);
+  }
+}
+getRecursive(5)
+
+// setTimeout();
+let num1=()=>console.log("one");
+let num2=()=>console.log("two");
+let num3=()=>console.log("three");
+
+let num4=()=>{
+     console.log("four");
+    //run after certain time 
+     setTimeout(num1,0);
+     num3();
+}
+
+console.log(num4());
+
+
+
+
+
+

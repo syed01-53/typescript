@@ -1,0 +1,17 @@
+oop :object oriented progarm 
+deal with object 
+it work like who object work 
+
+it relate programing with real word 
+
+class consist of rules 
+
+object are building block 
+
+class is a blue print of object 
+
+has four fundamental :
+Abstraction 
+Encapsulation
+Inheritance 
+Polymorphism  

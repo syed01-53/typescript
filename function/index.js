@@ -33,3 +33,22 @@ var arrowFunction1 = function (num, num2, num1) {
     return ("result is that : ".concat(num, "  ").concat(num2, "  ").concat(num1));
 };
 console.log(arrowFunction1("number"));
+// recursive function call it self 
+function getRecursive(nr) {
+    console.log(nr);
+    if (nr > 0) {
+        getRecursive(--nr);
+    }
+}
+getRecursive(5);
+// setTimeout();
+var num1 = function () { return console.log("one"); };
+var num2 = function () { return console.log("two"); };
+var num3 = function () { return console.log("three"); };
+var num4 = function () {
+    console.log("four");
+    //run after certain time 
+    setTimeout(num1, 0);
+    num3();
+};
+console.log(num4());

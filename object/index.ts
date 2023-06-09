@@ -73,7 +73,10 @@ let person  ={
     personId:3636,
 
       worker(){
-       console.log(`hello powerful man ${person.personMassage}`);
+        // this use because we pass data form the object properties to  object function properties 
+        // means not getting data from global object 
+        // her we are getting data from child 
+       console.log(`hello powerful man ${this.personMassage}`);
        
       },
       details(name:string, id:number){
@@ -167,9 +170,37 @@ let employee:Iemployee[]=[
 
 for(let i=0;i<employee.length ; i++){
     console.log("all employee");
-    if(employee.==="employee")
+ 
     console.log(employee[i]);
-    else{
-        console.log ()
+  
+}
+
+// we are using of loop A for...of loop operates on the values sourced from an iterable one by one in sequential order.
+let totalNoneEmployee:number=0;
+let totalEmployee :number=0;
+let jobEmployee :Iemployee[]=[] ;
+
+for (const iterator of employee) {
+    if(iterator.status==="employee")
+    {
+        totalEmployee+=1;
+        jobEmployee.push(iterator);
     }
+    else
+    {
+        totalNoneEmployee+=1;
+    }
+}
+console.log(jobEmployee);
+console.log(`total employee ${totalEmployee}`);
+console.log(`total  not employee ${totalNoneEmployee}`);
+// type object 
+type bro ={
+    firstname:string, lastName:string ;
+}
+let namaePerson:bro={
+firstname:"zain",
+lastName:"shaheen" ,
+// produce error 
+// hhdhd:"hdhdb";  
 }
