@@ -1,4 +1,3 @@
-// class Mobile {
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,42 +13,38 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-//     private brand:string ;
-//     private color:string ;
-//     private price:number ;
-//       // her ! indicate this value not empty every time of filling 
-//     owner !:string;
-// // optional 
-//     name?:string;
-//     // only one time use  keyword readonly 
-//     readonly vinNumber!:string
-// // constructor is used to initializing  the 
-// // call on making new object automatic 
-//     constructor(brand : string, color:string, price:number, vinNumber:string)
-//     {
-//         // this keyword refer to current class 
-//         this.brand=brand;
-//         this.color=color;
-//         this.price=price;
-//         this.vinNumber=vinNumber;
-//     }
-// }
-// // new keyword generate new object 
-// let mobile= new Mobile("hello" ,"blue", 3535, "965223as");
-// console.log(mobile);
-// class car {
-//     private color="sliver";
-//     start(state:boolean){
-// if (state===true) {
-//     console.log("start your car");
-// } else {
-//     console.log("no start");
-// }
-//     }
-// }
-// let myStart=new car();
-// // accessing function 
-// myStart.start(true);
+var Mobile = /** @class */ (function () {
+    // constructor is used to initializing  the 
+    // call on making new object automatic 
+    function Mobile(brand, color, price, vinNumber) {
+        // this keyword refer to current class 
+        this.brand = brand;
+        this.color = color;
+        this.price = price;
+        this.vinNumber = vinNumber;
+    }
+    return Mobile;
+}());
+// new keyword generate new object 
+var mobile = new Mobile("hello", "blue", 3535, "965223as");
+console.log(mobile);
+var car2 = /** @class */ (function () {
+    function car2() {
+        this.color = "sliver";
+    }
+    car2.prototype.start = function (state) {
+        if (state === true) {
+            console.log("start your car");
+        }
+        else {
+            console.log("no start");
+        }
+    };
+    return car2;
+}());
+var myStart = new car2();
+// accessing function 
+myStart.start(true);
 // ** override constructor  mens using multiple constructor in similar class The constructor method is a special method for creating and initializing an object created with a class.
 // overriding method using same name of function with different  functionality or same 
 // extend the constructor 
@@ -107,3 +102,37 @@ console.log(myCar1);
 var myCar = new nissan("black", "pak ", 7328);
 console.log(myCar.start(true));
 console.log(myCar);
+// assignment 
+var car1 = /** @class */ (function () {
+    function car1(name) {
+        this.name = name;
+    }
+    ;
+    return car1;
+}());
+var marsadi = /** @class */ (function (_super) {
+    __extends(marsadi, _super);
+    function marsadi(name, model) {
+        var _this = _super.call(this, name) || this;
+        _this.model = name;
+        return _this;
+    }
+    return marsadi;
+}(car1));
+var Maserati_Ghibli = /** @class */ (function (_super) {
+    __extends(Maserati_Ghibli, _super);
+    function Maserati_Ghibli() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Maserati_Ghibli;
+}(marsadi));
+var Maserati_MC20 = /** @class */ (function (_super) {
+    __extends(Maserati_MC20, _super);
+    function Maserati_MC20() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Maserati_MC20;
+}(marsadi));
+var myCarDream = new marsadi("marsdi ", 53535346);
+console.log(myCarDream.name);
+console.log(myCarDream.model);
