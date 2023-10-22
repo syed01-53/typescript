@@ -160,5 +160,46 @@ this.me=me;
 }
 let myCarDream= new Maserati_MC20("car ","marsadi", "Maserati_Ghibli", "Maserati_MC20");
 
+// with out static 
+class Employee
+{
+  count :number =0;
+  firstName!:string;
+  constructor(firstName:string){
+    this.count = ++this.count;
+    this.firstName=firstName;
+  }
+}
 
+let object1= new Employee("zain");
+console.log(object1);
+
+let object2= new Employee("Ali");
+console.log(object2);
+
+let object3= new Employee("mehmmad");
+console.log(object3);
+
+// with static 
+class Employee1
+{
+  static count :number =0;
+  firstName!:string;
+  constructor(firstName:string){
+    // we are not using this keyword 
+     Employee1.count = ++ Employee1.count;
+     console.log(Employee1.count);
+     
+    this.firstName=firstName;
+  }
+}
+
+let Static1= new Employee1("zain");
+console.log(Static1);
+
+let Static2= new Employee1("Ali");
+console.log(Static2);
+
+let Static3= new Employee1("mehmmad");
+console.log(Static3);
 

@@ -112,27 +112,63 @@ var car1 = /** @class */ (function () {
 }());
 var marsadi = /** @class */ (function (_super) {
     __extends(marsadi, _super);
-    function marsadi(name, model) {
+    function marsadi(name, model, mychild) {
         var _this = _super.call(this, name) || this;
-        _this.model = name;
+        _this.model = model;
         return _this;
     }
     return marsadi;
 }(car1));
-var Maserati_Ghibli = /** @class */ (function (_super) {
-    __extends(Maserati_Ghibli, _super);
-    function Maserati_Ghibli() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return Maserati_Ghibli;
-}(marsadi));
+// class Maserati_Ghibli extends marsadi  {
+//   public brother?: string;
+//   constructor(gradFather:string , father:string , brother:string){
+//     super(gradFather, father , brother)
+//    this.father=father;
+//   this.brother=  brother;
+//    }
+// }
 var Maserati_MC20 = /** @class */ (function (_super) {
     __extends(Maserati_MC20, _super);
-    function Maserati_MC20() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Maserati_MC20(gradFather, father, brother, me) {
+        var _this = _super.call(this, gradFather, father, brother) || this;
+        _this;
+        _this.father = father;
+        _this.brother = brother;
+        _this.me = me;
+        return _this;
     }
     return Maserati_MC20;
 }(marsadi));
-var myCarDream = new marsadi("marsdi ", 53535346);
-console.log(myCarDream.name);
-console.log(myCarDream.model);
+var myCarDream = new Maserati_MC20("car ", "marsadi", "Maserati_Ghibli", "Maserati_MC20");
+// with out static 
+var Employee = /** @class */ (function () {
+    function Employee(firstName) {
+        this.count = 0;
+        this.count = ++this.count;
+        this.firstName = firstName;
+    }
+    return Employee;
+}());
+var object1 = new Employee("zain");
+console.log(object1);
+var object2 = new Employee("Ali");
+console.log(object2);
+var object3 = new Employee("mehmmad");
+console.log(object3);
+// with static 
+var Employee1 = /** @class */ (function () {
+    function Employee1(firstName) {
+        // we are not using this keyword 
+        Employee1.count = ++Employee1.count;
+        console.log(Employee1.count);
+        this.firstName = firstName;
+    }
+    Employee1.count = 0;
+    return Employee1;
+}());
+var Static1 = new Employee1("zain");
+console.log(Static1);
+var Static2 = new Employee1("Ali");
+console.log(Static2);
+var Static3 = new Employee1("mehmmad");
+console.log(Static3);
